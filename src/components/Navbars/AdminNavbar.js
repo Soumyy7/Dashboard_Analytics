@@ -9,7 +9,7 @@ function AdminNavbar(props) {
           <NavbarBrand
             href="#pablo"
             onClick={(e) => e.preventDefault()}
-            style={{ paddingTop: "40px" }}
+            style={{ paddingTop: "60px" }}
           >
             Dashboard
           </NavbarBrand>
