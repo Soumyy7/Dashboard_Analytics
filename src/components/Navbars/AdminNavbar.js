@@ -23,20 +23,20 @@ import classNames from "classnames";
 import {
   Button,
   Collapse,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  UncontrolledDropdown,
-  Input,
+  // DropdownToggle,
+  // DropdownMenu,
+  // DropdownItem,
+  // UncontrolledDropdown,
+  // Input,
   InputGroup,
   NavbarBrand,
   Navbar,
-  NavLink,
+  // NavLink,
   Nav,
   Container,
-  Modal,
+  // Modal,
   NavbarToggler,
-  ModalHeader,
+  // ModalHeader,
 } from "reactstrap";
 
 function AdminNavbar(props) {
@@ -104,7 +104,7 @@ function AdminNavbar(props) {
                   <span className="d-lg-none d-md-block">Search</span>
                 </Button>
               </InputGroup>
-              <UncontrolledDropdown nav>
+              {/* <UncontrolledDropdown nav>
                 <DropdownToggle
                   caret
                   color="default"
@@ -142,8 +142,8 @@ function AdminNavbar(props) {
                     </DropdownItem>
                   </NavLink>
                 </DropdownMenu>
-              </UncontrolledDropdown>
-              <UncontrolledDropdown nav>
+              </UncontrolledDropdown> */}
+              {/* <UncontrolledDropdown nav>
                 <DropdownToggle
                   caret
                   color="default"
@@ -168,13 +168,13 @@ function AdminNavbar(props) {
                     <DropdownItem className="nav-item">Log out</DropdownItem>
                   </NavLink>
                 </DropdownMenu>
-              </UncontrolledDropdown>
-              <li className="separator d-lg-none" />
+              </UncontrolledDropdown> */}
+              {/* <li className="separator d-lg-none" /> */}
             </Nav>
           </Collapse>
         </Container>
       </Navbar>
-      <Modal
+      {/* <Modal
         modalClassName="modal-search"
         isOpen={modalSearch}
         toggle={toggleModalSearch}
@@ -189,7 +189,7 @@ function AdminNavbar(props) {
             <i className="tim-icons icon-simple-remove" />
           </button>
         </ModalHeader>
-      </Modal>
+      </Modal> */}
     </>
   );
 }
