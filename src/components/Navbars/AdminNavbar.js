@@ -21,7 +21,7 @@ import classNames from "classnames";
 
 // reactstrap components
 import {
-  Button,
+  // Button,
   Collapse,
   // DropdownToggle,
   // DropdownMenu,
@@ -41,7 +41,7 @@ import {
 
 function AdminNavbar(props) {
   const [collapseOpen, setcollapseOpen] = React.useState(false);
-  const [modalSearch, setmodalSearch] = React.useState(false);
+  // const [modalSearch, setmodalSearch] = React.useState(false);
   const [color, setcolor] = React.useState("navbar-transparent");
   React.useEffect(() => {
     window.addEventListener("resize", updateColor);
@@ -68,9 +68,9 @@ function AdminNavbar(props) {
     setcollapseOpen(!collapseOpen);
   };
   // this function is to open the Search modal
-  const toggleModalSearch = () => {
-    setmodalSearch(!modalSearch);
-  };
+  // const toggleModalSearch = () => {
+  //   setmodalSearch(!modalSearch);
+  // };
   return (
     <>
       <Navbar className={classNames("navbar-absolute", color)} expand="lg">
@@ -99,10 +99,10 @@ function AdminNavbar(props) {
           <Collapse navbar isOpen={collapseOpen}>
             <Nav className="ml-auto" navbar>
               <InputGroup className="search-bar">
-                <Button color="link" onClick={toggleModalSearch}>
+                {/* <Button color="link" onClick={toggleModalSearch}>
                   <i className="tim-icons icon-zoom-split" />
                   <span className="d-lg-none d-md-block">Search</span>
-                </Button>
+                </Button> */}
               </InputGroup>
               {/* <UncontrolledDropdown nav>
                 <DropdownToggle
