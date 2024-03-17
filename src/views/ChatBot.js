@@ -251,8 +251,10 @@ function ChatBot() {
   }
 
   return (
-    <div className="chat-bot">
-      <div style={{ position: "relative", height: "800px", width: "700px" }}>
+    <div>
+      {/* <div className="chat-bot"> */}
+      {/* <div style={{ position: "relative", height: "200px", width: "200px" }}> */}
+      <div>
         <MainContainer>
           <ChatContainer>
             <MessageList
