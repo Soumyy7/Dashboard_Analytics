@@ -178,6 +178,7 @@ function ChatBot() {
       message: "Hello, I'm ChatGPT! Ask me anything!",
       sentTime: "just now",
       sender: "ChatGPT",
+      direction: "incoming",
     },
   ]);
   const [isTyping, setIsTyping] = useState(false);
@@ -212,7 +213,10 @@ function ChatBot() {
       } else {
         role = "user";
       }
-      return { role: role, content: messageObject.message };
+      return {
+        role: role,
+        content: messageObject.message,
+      };
     });
 
     // Get the request body set up with the model we plan to use
@@ -244,6 +248,7 @@ function ChatBot() {
           {
             message: data.choices[0].message.content,
             sender: "ChatGPT",
+            direction: "incoming",
           },
         ]);
         setIsTyping(false);
@@ -252,28 +257,24 @@ function ChatBot() {
 
   return (
     <div>
-      {/* <div className="chat-bot"> */}
-      {/* <div style={{ position: "relative", height: "200px", width: "200px" }}> */}
-      <div>
-        <MainContainer>
-          <ChatContainer>
-            <MessageList
-              scrollBehavior="smooth"
-              typingIndicator={
-                isTyping ? (
-                  <TypingIndicator content="ChatGPT is typing" />
-                ) : null
-              }
-            >
-              {messages.map((message, i) => {
-                console.log(message);
-                return <Message key={i} model={message} />;
-              })}
-            </MessageList>
-            <MessageInput placeholder="Type message here" onSend={handleSend} />
-          </ChatContainer>
-        </MainContainer>
-      </div>
+      <MainContainer>
+        <ChatContainer>
+          <MessageList
+            scrollBehavior="smooth"
+            typingIndicator={
+              isTyping ? (
+                <TypingIndicator content="Leadenhall Bot is typing" />
+              ) : null
+            }
+          >
+            {messages.map((message, i) => {
+              console.log(message);
+              return <Message key={i} model={message} />;
+            })}
+          </MessageList>
+          <MessageInput placeholder="Type message here" onSend={handleSend} />
+        </ChatContainer>
+      </MainContainer>
     </div>
   );
 }
