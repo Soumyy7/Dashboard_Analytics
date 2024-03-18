@@ -228,13 +228,39 @@ function ChatBot() {
         systemMessage, // The system message DEFINES the logic of our chatGPT
         ...apiMessages, // The messages from our chat with ChatGPT
       ],
+      // stream: false,
     };
 
+    // await fetch("https://api.openai.com/v1/chat/completions", {
+    //   method: "POST",
+    //   headers: {
+    //     Authorization: "Bearer " + chatbot_key,
+    //     "Content-Type": "application/json",
+    //     response_format: { type: "json_object" },
+    //   },
+    //   body: JSON.stringify(apiRequestBody),
+    // })
+    //   .then((data) => {
+    //     return data.json();
+    //   })
+    //   .then((data) => {
+    //     console.log(data);
+    //     setMessages([
+    //       ...chatMessages,
+    //       {
+    //         message: data.choices[0].message.content,
+    //         sender: "ChatGPT",
+    //         direction: "incoming",
+    //       },
+    //     ]);
+    //     setIsTyping(false);
+    //   });
     await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
         Authorization: "Bearer " + chatbot_key,
         "Content-Type": "application/json",
+        response_format: JSON.stringify({ type: "json_object" }), // JSON.stringify() is used to convert the object to a JSON string
       },
       body: JSON.stringify(apiRequestBody),
     })
@@ -272,7 +298,12 @@ function ChatBot() {
               return <Message key={i} model={message} />;
             })}
           </MessageList>
-          <MessageInput placeholder="Type message here" onSend={handleSend} />
+          <MessageInput
+            // autoCorrect={false}
+            placeholder="Type message here"
+            onSend={handleSend}
+            defaultValue=""
+          />
         </ChatContainer>
       </MainContainer>
     </div>
