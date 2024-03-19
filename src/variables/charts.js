@@ -559,7 +559,7 @@ let chartExample3 = {
 // // // used inside src/views/Dashboard.js
 // #########################################
 const chartExample4 = {
-  data2: (canvas) => {
+  data1: (canvas) => {
     let ctx = canvas.getContext("2d");
 
     let gradientStroke3 = ctx.createLinearGradient(0, 230, 0, 50);
@@ -650,7 +650,7 @@ const chartExample4 = {
       },
     },
   },
-  data1: (canvas) => {
+  data2: (canvas) => {
     let ctx = canvas.getContext("2d");
 
     let gradientStroke3 = ctx.createLinearGradient(0, 230, 0, 50);
@@ -729,52 +729,306 @@ const chartExample4 = {
       ],
     };
   },
-  // options: {
-  //   maintainAspectRatio: false,
-  //   legend: {
-  //     display: false,
-  //   },
+};
 
-  //   tooltips: {
-  //     backgroundColor: "#f5f5f5",
-  //     titleFontColor: "#333",
-  //     bodyFontColor: "#666",
-  //     bodySpacing: 4,
-  //     xPadding: 12,
-  //     mode: "nearest",
-  //     intersect: 0,
-  //     position: "nearest",
-  //   },
-  //   responsive: true,
-  //   scales: {
-  //     yAxes: {
-  //       barPercentage: 1.6,
-  //       gridLines: {
-  //         drawBorder: false,
-  //         color: "rgba(29,140,248,0.0)",
-  //         zeroLineColor: "transparent",
-  //       },
-  //       ticks: {
-  //         suggestedMin: 50,
-  //         suggestedMax: 125,
-  //         padding: 20,
-  //         fontColor: "#9e9e9e",
-  //       },
-  //     },
-  //     xAxes: {
-  //       barPercentage: 1.6,
-  //       gridLines: {
-  //         drawBorder: false,
-  //         color: "rgba(0,242,195,0.1)",
-  //         zeroLineColor: "transparent",
-  //       },
-  //       ticks: {
-  //         padding: 20,
-  //         fontColor: "#9e9e9e",
-  //       },
-  //     },
-  //   },
-  // },
+const chartExample5 = {
+  data1: (canvas) => {
+    let ctx = canvas.getContext("2d");
+
+    let gradientStroke3 = ctx.createLinearGradient(0, 230, 0, 50);
+
+    gradientStroke3.addColorStop(1, "rgba(29,140,248,0.2)");
+    gradientStroke3.addColorStop(0.4, "rgba(29,140,248,0.0)");
+    gradientStroke3.addColorStop(0, "rgba(29,140,248,0)"); //blue colors
+
+    let gradientStroke2 = ctx.createLinearGradient(0, 230, 0, 50);
+
+    gradientStroke2.addColorStop(1, "rgba(255,160,122,0.2)"); // Lighter shade of orange
+    gradientStroke2.addColorStop(0.4, "rgba(255,160,122,0.0)"); // Transparent
+    gradientStroke2.addColorStop(0, "rgba(255,160,122,0)"); // Transparent
+    // orange colors
+
+    let gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
+
+    gradientStroke.addColorStop(1, "rgba(66,134,121,0.15)");
+    gradientStroke.addColorStop(0.4, "rgba(66,134,121,0.0)"); //green colors
+    gradientStroke.addColorStop(0, "rgba(66,134,121,0)"); //green colors
+
+    return {
+      labels: ["Business Plan", "Earned Premium", "GWP"],
+      datasets: [
+        {
+          label: "2021",
+          fill: true,
+          backgroundColor: gradientStroke,
+          borderColor: "#00d6b4",
+          borderWidth: 2,
+          borderDash: [],
+          borderDashOffset: 0.0,
+          pointBackgroundColor: "#00d6b4",
+          pointBorderColor: "rgba(255,255,255,0)",
+          pointHoverBackgroundColor: "#00d6b4",
+          pointBorderWidth: 20,
+          pointHoverRadius: 4,
+          pointHoverBorderWidth: 15,
+          pointRadius: 4,
+          data: [34224486.3111017, 9119953.76594071, 7015349.05072362],
+        },
+        {
+          label: "2022",
+          fill: true,
+          backgroundColor: gradientStroke,
+          borderColor: "#00d6b4",
+          borderWidth: 2,
+          borderDash: [],
+          borderDashOffset: 0.0,
+          pointBackgroundColor: "#00d6b4",
+          pointBorderColor: "rgba(255,255,255,0)",
+          pointHoverBackgroundColor: "#00d6b4",
+          pointBorderWidth: 20,
+          pointHoverRadius: 4,
+          pointHoverBorderWidth: 15,
+          pointRadius: 4,
+          data: [7207212.83327773, 9369376.68326105, 6566010.80556427],
+        },
+      ],
+    };
+  },
+
+  data2: (canvas) => {
+    let ctx = canvas.getContext("2d");
+
+    let gradientStroke3 = ctx.createLinearGradient(0, 230, 0, 50);
+
+    gradientStroke3.addColorStop(1, "rgba(29,140,248,0.2)");
+    gradientStroke3.addColorStop(0.4, "rgba(29,140,248,0.0)");
+    gradientStroke3.addColorStop(0, "rgba(29,140,248,0)"); //blue colors
+
+    let gradientStroke2 = ctx.createLinearGradient(0, 230, 0, 50);
+
+    gradientStroke2.addColorStop(1, "rgba(255,160,122,0.2)"); // Lighter shade of orange
+    gradientStroke2.addColorStop(0.4, "rgba(255,160,122,0.0)"); // Transparent
+    gradientStroke2.addColorStop(0, "rgba(255,160,122,0)"); // Transparent
+    // orange colors
+
+    let gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
+
+    gradientStroke.addColorStop(1, "rgba(66,134,121,0.15)");
+    gradientStroke.addColorStop(0.4, "rgba(66,134,121,0.0)"); //green colors
+    gradientStroke.addColorStop(0, "rgba(66,134,121,0)"); //green colors
+
+    return {
+      labels: ["Business Plan", "Earn.Premium", "GWP"],
+      datasets: [
+        {
+          label: "Crime 2021",
+          fill: true,
+          backgroundColor: gradientStroke,
+          borderColor: "#00d6b4",
+          borderWidth: 2,
+          borderDash: [],
+          borderDashOffset: 0.0,
+          pointBackgroundColor: "#00d6b4",
+          pointBorderColor: "rgba(255,255,255,0)",
+          pointHoverBackgroundColor: "#00d6b4",
+          pointBorderWidth: 20,
+          pointHoverRadius: 4,
+          pointHoverBorderWidth: 15,
+          pointRadius: 4,
+          data: [8076577.78264983, 3196373.43933229, 2458748.79948638],
+        },
+        {
+          label: "Crime 2022",
+          fill: true,
+          backgroundColor: gradientStroke,
+          borderColor: "#00d6b4",
+          borderWidth: 2,
+          borderDash: [],
+          borderDashOffset: 0.0,
+          pointBackgroundColor: "#00d6b4",
+          pointBorderColor: "rgba(255,255,255,0)",
+          pointHoverBackgroundColor: "#00d6b4",
+          pointBorderWidth: 20,
+          pointHoverRadius: 4,
+          pointHoverBorderWidth: 15,
+          pointRadius: 4,
+          data: [2439772.12709958, 3171703.76522946, 2224824.59587138],
+        },
+      ],
+    };
+  },
+  data3: (canvas) => {
+    let ctx = canvas.getContext("2d");
+
+    let gradientStroke3 = ctx.createLinearGradient(0, 230, 0, 50);
+
+    gradientStroke3.addColorStop(1, "rgba(29,140,248,0.2)");
+    gradientStroke3.addColorStop(0.4, "rgba(29,140,248,0.0)");
+    gradientStroke3.addColorStop(0, "rgba(29,140,248,0)"); //blue colors
+
+    let gradientStroke2 = ctx.createLinearGradient(0, 230, 0, 50);
+
+    gradientStroke2.addColorStop(1, "rgba(255,160,122,0.2)"); // Lighter shade of orange
+    gradientStroke2.addColorStop(0.4, "rgba(255,160,122,0.0)"); // Transparent
+    gradientStroke2.addColorStop(0, "rgba(255,160,122,0)"); // Transparent
+    // orange colors
+
+    let gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
+
+    gradientStroke.addColorStop(1, "rgba(66,134,121,0.15)");
+    gradientStroke.addColorStop(0.4, "rgba(66,134,121,0.0)"); //green colors
+    gradientStroke.addColorStop(0, "rgba(66,134,121,0)"); //green colors
+
+    return {
+      labels: ["Business Plan", "Earn.Premium", "GWP"],
+      datasets: [
+        {
+          label: "D&O 2021",
+          fill: true,
+          backgroundColor: gradientStroke,
+          borderColor: "#00d6b4",
+          borderWidth: 2,
+          borderDash: [],
+          borderDashOffset: 0.0,
+          pointBackgroundColor: "#00d6b4",
+          pointBorderColor: "rgba(255,255,255,0)",
+          pointHoverBackgroundColor: "#00d6b4",
+          pointBorderWidth: 20,
+          pointHoverRadius: 4,
+          pointHoverBorderWidth: 15,
+          pointRadius: 4,
+          data: [2214135.53741158, 2878376.19863506, 1907931.1285345],
+        },
+        {
+          label: "D&O 2022",
+          fill: true,
+          backgroundColor: gradientStroke,
+          borderColor: "#00d6b4",
+          borderWidth: 2,
+          borderDash: [],
+          borderDashOffset: 0.0,
+          pointBackgroundColor: "#00d6b4",
+          pointBorderColor: "rgba(255,255,255,0)",
+          pointHoverBackgroundColor: "#00d6b4",
+          pointBorderWidth: 20,
+          pointHoverRadius: 4,
+          pointHoverBorderWidth: 15,
+          pointRadius: 4,
+          data: [2214135.53741158, 2878376.19863506, 1907931.1285345],
+        },
+      ],
+    };
+  },
+
+  data4: (canvas) => {
+    let ctx = canvas.getContext("2d");
+
+    let gradientStroke3 = ctx.createLinearGradient(0, 230, 0, 50);
+
+    gradientStroke3.addColorStop(1, "rgba(29,140,248,0.2)");
+    gradientStroke3.addColorStop(0.4, "rgba(29,140,248,0.0)");
+    gradientStroke3.addColorStop(0, "rgba(29,140,248,0)"); //blue colors
+
+    let gradientStroke2 = ctx.createLinearGradient(0, 230, 0, 50);
+
+    gradientStroke2.addColorStop(1, "rgba(255,160,122,0.2)"); // Lighter shade of orange
+    gradientStroke2.addColorStop(0.4, "rgba(255,160,122,0.0)"); // Transparent
+    gradientStroke2.addColorStop(0, "rgba(255,160,122,0)"); // Transparent
+    // orange colors
+
+    let gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
+
+    gradientStroke.addColorStop(1, "rgba(66,134,121,0.15)");
+    gradientStroke.addColorStop(0.4, "rgba(66,134,121,0.0)"); //green colors
+    gradientStroke.addColorStop(0, "rgba(66,134,121,0)"); //green colors
+
+    return {
+      labels: ["Business Plan", "Earn.Premium", "GWP"],
+      datasets: [
+        {
+          label: "FIPI 2021",
+          fill: true,
+          backgroundColor: gradientStroke,
+          borderColor: "#00d6b4",
+          borderWidth: 2,
+          borderDash: [],
+          borderDashOffset: 0.0,
+          pointBackgroundColor: "#00d6b4",
+          pointBorderColor: "rgba(255,255,255,0)",
+          pointHoverBackgroundColor: "#00d6b4",
+          pointBorderWidth: 20,
+          pointHoverRadius: 4,
+          pointHoverBorderWidth: 15,
+          pointRadius: 4,
+          data: [13796565.3615624, 3456790.36790744, 2659069.51377495],
+        },
+        {
+          label: "FIPI 2022",
+          fill: true,
+          backgroundColor: gradientStroke,
+          borderColor: "#00d6b4",
+          borderWidth: 2,
+          borderDash: [],
+          borderDashOffset: 0.0,
+          pointBackgroundColor: "#00d6b4",
+          pointBorderColor: "rgba(255,255,255,0)",
+          pointHoverBackgroundColor: "#00d6b4",
+          pointBorderWidth: 20,
+          pointHoverRadius: 4,
+          pointHoverBorderWidth: 15,
+          pointRadius: 4,
+          data: [2553305.16876656, 3319296.71939653, 2433255.08115839],
+        },
+      ],
+    };
+  },
+
+  options: {
+    maintainAspectRatio: false,
+    legend: {
+      display: false,
+    },
+
+    tooltips: {
+      backgroundColor: "#f5f5f5",
+      titleFontColor: "#333",
+      bodyFontColor: "#666",
+      bodySpacing: 4,
+      xPadding: 12,
+      mode: "nearest",
+      intersect: 0,
+      position: "nearest",
+    },
+    responsive: true,
+    scales: {
+      yAxes: {
+        barPercentage: 1.6,
+        gridLines: {
+          drawBorder: false,
+          color: "rgba(29,140,248,0.0)",
+          zeroLineColor: "transparent",
+        },
+        ticks: {
+          suggestedMin: 50,
+          suggestedMax: 125,
+          padding: 20,
+          fontColor: "#9e9e9e",
+        },
+      },
+      xAxes: {
+        barPercentage: 1.6,
+        gridLines: {
+          drawBorder: false,
+          color: "rgba(0,242,195,0.1)",
+          zeroLineColor: "transparent",
+        },
+        ticks: {
+          padding: 20,
+          fontColor: "#9e9e9e",
+        },
+      },
+    },
+  },
 };
 
 module.exports = {
@@ -782,4 +1036,5 @@ module.exports = {
   chartExample2, // in src/views/Dashboard.js
   chartExample3, // in src/views/Dashboard.js
   chartExample4, // in src/views/Dashboard.js
+  chartExample5, // in src/views/Dashboard.js
 };

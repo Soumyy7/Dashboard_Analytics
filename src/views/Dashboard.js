@@ -27,6 +27,7 @@ import {
   chartExample2,
   chartExample3,
   chartExample4,
+  chartExample5,
 } from "variables/charts.js";
 
 function Dashboard(props) {
@@ -37,6 +38,10 @@ function Dashboard(props) {
   const [smallChartData, setsmallChartData] = React.useState("data1");
   const setSmChartData = (name) => {
     setsmallChartData(name);
+  };
+  const [mediumChartData, setmediumChartData] = React.useState("data1");
+  const setMdChartData = (name) => {
+    setmediumChartData(name);
   };
 
   return (
@@ -211,12 +216,12 @@ function Dashboard(props) {
                       <Button
                         tag="label"
                         className={classNames("btn-simple", {
-                          active: smallChartData === "data2",
+                          active: smallChartData === "data1",
                         })}
                         color="info"
                         id="0"
                         size="sm"
-                        onClick={() => setSmChartData("data2")}
+                        onClick={() => setSmChartData("data1")}
                       >
                         <span className="d-none d-sm-block d-md-block d-lg-block d-xl-block">
                           Complete PI
@@ -231,9 +236,9 @@ function Dashboard(props) {
                         size="sm"
                         tag="label"
                         className={classNames("btn-simple", {
-                          active: smallChartData === "data1",
+                          active: smallChartData === "data2",
                         })}
-                        onClick={() => setSmChartData("data1")}
+                        onClick={() => setSmChartData("data2")}
                       >
                         <span className="d-none d-sm-block d-md-block d-lg-block d-xl-block">
                           Yearly PI
@@ -264,7 +269,7 @@ function Dashboard(props) {
                 <Row>
                   <Col className="text-left" sm="6">
                     <h5 className="card-category">Performance</h5>
-                    <CardTitle tag="h2">Commercial PI</CardTitle>
+                    <CardTitle tag="h2">Financial Institution</CardTitle>
                   </Col>
                   <Col sm="6">
                     <ButtonGroup
@@ -274,15 +279,15 @@ function Dashboard(props) {
                       <Button
                         tag="openmarket"
                         className={classNames("btn-simple", {
-                          active: smallChartData === "data1",
+                          active: mediumChartData === "data1",
                         })}
                         color="info"
                         id="0"
                         size="sm"
-                        onClick={() => setSmChartData("data1")}
+                        onClick={() => setMdChartData("data1")}
                       >
                         <span className="d-none d-sm-block d-md-block d-lg-block d-xl-block">
-                          Complete PI
+                          Complete Financial Institution
                         </span>
                         <span className="d-block d-sm-none">
                           <i className="tim-icons icon-single-02" />
@@ -294,12 +299,12 @@ function Dashboard(props) {
                         size="sm"
                         tag="label"
                         className={classNames("btn-simple", {
-                          active: smallChartData === "data2",
+                          active: mediumChartData === "data2",
                         })}
-                        onClick={() => setSmChartData("data2")}
+                        onClick={() => setMdChartData("data2")}
                       >
                         <span className="d-none d-sm-block d-md-block d-lg-block d-xl-block">
-                          Year-wise PI
+                          Crime
                         </span>
                         <span className="d-block d-sm-none">
                           <i className="tim-icons icon-gift-2" />
@@ -308,15 +313,32 @@ function Dashboard(props) {
                       <Button
                         tag="label"
                         className={classNames("btn-simple", {
-                          active: bigChartData === "data3",
+                          active: mediumChartData === "data3",
                         })}
                         color="info"
                         id="2"
                         size="sm"
-                        onClick={() => setBgChartData("data3")}
+                        onClick={() => setMdChartData("data3")}
                       >
                         <span className="d-none d-sm-block d-md-block d-lg-block d-xl-block">
-                          Facilities 2022
+                          D&O
+                        </span>
+                        <span className="d-block d-sm-none">
+                          <i className="tim-icons icon-single-02" />
+                        </span>
+                      </Button>
+                      <Button
+                        tag="label"
+                        className={classNames("btn-simple", {
+                          active: mediumChartData === "data4",
+                        })}
+                        color="info"
+                        id="2"
+                        size="sm"
+                        onClick={() => setMdChartData("data4")}
+                      >
+                        <span className="d-none d-sm-block d-md-block d-lg-block d-xl-block">
+                          FIPI
                         </span>
                         <span className="d-block d-sm-none">
                           <i className="tim-icons icon-single-02" />
@@ -329,8 +351,8 @@ function Dashboard(props) {
               <CardBody>
                 <div className="chart-area">
                   <Bar
-                    data={chartExample4[smallChartData]}
-                    options={chartExample4.options}
+                    data={chartExample5[mediumChartData]}
+                    options={chartExample5.options}
                   />
                 </div>
               </CardBody>
