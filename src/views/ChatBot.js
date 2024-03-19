@@ -282,7 +282,7 @@ function ChatBot() {
   }
 
   return (
-    <div>
+    <div className="content">
       <MainContainer>
         <ChatContainer>
           <MessageList
