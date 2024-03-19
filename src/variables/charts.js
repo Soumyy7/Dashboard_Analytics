@@ -559,8 +559,21 @@ let chartExample3 = {
 // // // used inside src/views/Dashboard.js
 // #########################################
 const chartExample4 = {
-  data: (canvas) => {
+  data2: (canvas) => {
     let ctx = canvas.getContext("2d");
+
+    let gradientStroke3 = ctx.createLinearGradient(0, 230, 0, 50);
+
+    gradientStroke3.addColorStop(1, "rgba(29,140,248,0.2)");
+    gradientStroke3.addColorStop(0.4, "rgba(29,140,248,0.0)");
+    gradientStroke3.addColorStop(0, "rgba(29,140,248,0)"); //blue colors
+
+    let gradientStroke2 = ctx.createLinearGradient(0, 230, 0, 50);
+
+    gradientStroke2.addColorStop(1, "rgba(255,160,122,0.2)"); // Lighter shade of orange
+    gradientStroke2.addColorStop(0.4, "rgba(255,160,122,0.0)"); // Transparent
+    gradientStroke2.addColorStop(0, "rgba(255,160,122,0)"); // Transparent
+    // orange colors
 
     let gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
 
@@ -569,10 +582,10 @@ const chartExample4 = {
     gradientStroke.addColorStop(0, "rgba(66,134,121,0)"); //green colors
 
     return {
-      labels: ["JUL", "AUG", "SEP", "OCT", "NOV"],
+      labels: ["Business Plan", "Earn.Premium", "GWP"],
       datasets: [
         {
-          label: "My First dataset",
+          label: "Commercial PI",
           fill: true,
           backgroundColor: gradientStroke,
           borderColor: "#00d6b4",
@@ -586,7 +599,7 @@ const chartExample4 = {
           pointHoverRadius: 4,
           pointHoverBorderWidth: 15,
           pointRadius: 4,
-          data: [90, 27, 60, 12, 80],
+          data: [43224530.27, 21138711.47, 17204009.14],
         },
       ],
     };
@@ -637,6 +650,131 @@ const chartExample4 = {
       },
     },
   },
+  data1: (canvas) => {
+    let ctx = canvas.getContext("2d");
+
+    let gradientStroke3 = ctx.createLinearGradient(0, 230, 0, 50);
+
+    gradientStroke3.addColorStop(1, "rgba(29,140,248,0.2)");
+    gradientStroke3.addColorStop(0.4, "rgba(29,140,248,0.0)");
+    gradientStroke3.addColorStop(0, "rgba(29,140,248,0)"); //blue colors
+
+    let gradientStroke2 = ctx.createLinearGradient(0, 230, 0, 50);
+
+    gradientStroke2.addColorStop(1, "rgba(255,160,122,0.2)"); // Lighter shade of orange
+    gradientStroke2.addColorStop(0.4, "rgba(255,160,122,0.0)"); // Transparent
+    gradientStroke2.addColorStop(0, "rgba(255,160,122,0)"); // Transparent
+    // orange colors
+
+    let gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
+
+    gradientStroke.addColorStop(1, "rgba(66,134,121,0.15)");
+    gradientStroke.addColorStop(0.4, "rgba(66,134,121,0.0)"); //green colors
+    gradientStroke.addColorStop(0, "rgba(66,134,121,0)"); //green colors
+
+    return {
+      labels: ["PI 2021", "PI 2022"],
+      datasets: [
+        {
+          label: "Business Plan",
+          fill: true,
+          backgroundColor: gradientStroke,
+          borderColor: "#00d6b4",
+          borderWidth: 2,
+          borderDash: [],
+          borderDashOffset: 0.0,
+          pointBackgroundColor: "#00d6b4",
+          pointBorderColor: "rgba(255,255,255,0)",
+          pointHoverBackgroundColor: "#00d6b4",
+          pointBorderWidth: 20,
+          pointHoverRadius: 4,
+          pointHoverBorderWidth: 15,
+          pointRadius: 4,
+          data: [35358859.72, 7865670.546],
+        },
+        {
+          label: "Earned Premium",
+          fill: true,
+          backgroundColor: gradientStroke,
+          borderColor: "#00d6b4",
+          borderWidth: 2,
+          borderDash: [],
+          borderDashOffset: 0.0,
+          pointBackgroundColor: "#00d6b4",
+          pointBorderColor: "rgba(255,255,255,0)",
+          pointHoverBackgroundColor: "#00d6b4",
+          pointBorderWidth: 20,
+          pointHoverRadius: 4,
+          pointHoverBorderWidth: 15,
+          pointRadius: 4,
+          data: [10913339.76, 10225371.71],
+        },
+        {
+          label: "GWP",
+          fill: true,
+          backgroundColor: gradientStroke,
+          borderColor: "#00d6b4",
+          borderWidth: 2,
+          borderDash: [],
+          borderDashOffset: 0.0,
+          pointBackgroundColor: "#00d6b4",
+          pointBorderColor: "rgba(255,255,255,0)",
+          pointHoverBackgroundColor: "#00d6b4",
+          pointBorderWidth: 20,
+          pointHoverRadius: 4,
+          pointHoverBorderWidth: 15,
+          pointRadius: 4,
+          data: [8394876.735, 8809132.408],
+        },
+      ],
+    };
+  },
+  // options: {
+  //   maintainAspectRatio: false,
+  //   legend: {
+  //     display: false,
+  //   },
+
+  //   tooltips: {
+  //     backgroundColor: "#f5f5f5",
+  //     titleFontColor: "#333",
+  //     bodyFontColor: "#666",
+  //     bodySpacing: 4,
+  //     xPadding: 12,
+  //     mode: "nearest",
+  //     intersect: 0,
+  //     position: "nearest",
+  //   },
+  //   responsive: true,
+  //   scales: {
+  //     yAxes: {
+  //       barPercentage: 1.6,
+  //       gridLines: {
+  //         drawBorder: false,
+  //         color: "rgba(29,140,248,0.0)",
+  //         zeroLineColor: "transparent",
+  //       },
+  //       ticks: {
+  //         suggestedMin: 50,
+  //         suggestedMax: 125,
+  //         padding: 20,
+  //         fontColor: "#9e9e9e",
+  //       },
+  //     },
+  //     xAxes: {
+  //       barPercentage: 1.6,
+  //       gridLines: {
+  //         drawBorder: false,
+  //         color: "rgba(0,242,195,0.1)",
+  //         zeroLineColor: "transparent",
+  //       },
+  //       ticks: {
+  //         padding: 20,
+  //         fontColor: "#9e9e9e",
+  //       },
+  //     },
+  //   },
+  // },
 };
 
 module.exports = {

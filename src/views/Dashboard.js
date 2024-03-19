@@ -34,6 +34,11 @@ function Dashboard(props) {
   const setBgChartData = (name) => {
     setbigChartData(name);
   };
+  const [smallChartData, setsmallChartData] = React.useState("data1");
+  const setSmChartData = (name) => {
+    setsmallChartData(name);
+  };
+
   return (
     <>
       <div className="content">
@@ -174,17 +179,157 @@ function Dashboard(props) {
             </Card>
           </Col>
           <Col lg="4">
-            <Card className="card-chart">
+            {/* <Card className="card-chart">
               <CardHeader>
-                <h5 className="card-category">Completed Tasks</h5>
+                <h5 className="card-category">2021 & 2022</h5>
                 <CardTitle tag="h3">
-                  <i className="tim-icons icon-send text-success" /> 12,100K
+                  <i className="tim-icons icon-send text-success" /> Commercial
+                  PI
                 </CardTitle>
               </CardHeader>
               <CardBody>
                 <div className="chart-area">
-                  <Line
-                    data={chartExample4.data}
+                  <Bar
+                    data={chartExample4.data1}
+                    options={chartExample4.options}
+                  />
+                </div>
+              </CardBody>
+            </Card> */}
+            <Card className="card-chart">
+              <CardHeader>
+                <Row>
+                  <Col className="text-left" sm="6">
+                    <h5 className="card-category">Performance</h5>
+                    <CardTitle tag="h2">Comm. PI</CardTitle>
+                  </Col>
+                  <Col sm="6">
+                    <ButtonGroup
+                      className="btn-group-toggle float-right"
+                      data-toggle="buttons"
+                    >
+                      <Button
+                        tag="label"
+                        className={classNames("btn-simple", {
+                          active: smallChartData === "data2",
+                        })}
+                        color="info"
+                        id="0"
+                        size="sm"
+                        onClick={() => setSmChartData("data2")}
+                      >
+                        <span className="d-none d-sm-block d-md-block d-lg-block d-xl-block">
+                          Complete PI
+                        </span>
+                        <span className="d-block d-sm-none">
+                          <i className="tim-icons icon-single-02" />
+                        </span>
+                      </Button>
+                      <Button
+                        color="info"
+                        id="1"
+                        size="sm"
+                        tag="label"
+                        className={classNames("btn-simple", {
+                          active: smallChartData === "data1",
+                        })}
+                        onClick={() => setSmChartData("data1")}
+                      >
+                        <span className="d-none d-sm-block d-md-block d-lg-block d-xl-block">
+                          Yearly PI
+                        </span>
+                        <span className="d-block d-sm-none">
+                          <i className="tim-icons icon-gift-2" />
+                        </span>
+                      </Button>
+                    </ButtonGroup>
+                  </Col>
+                </Row>
+              </CardHeader>
+              <CardBody>
+                <div className="chart-area">
+                  <Bar
+                    data={chartExample4[smallChartData]}
+                    options={chartExample4.options}
+                  />
+                </div>
+              </CardBody>
+            </Card>
+          </Col>
+        </Row>
+        <Row>
+          <Col xs="12">
+            <Card className="card-chart">
+              <CardHeader>
+                <Row>
+                  <Col className="text-left" sm="6">
+                    <h5 className="card-category">Performance</h5>
+                    <CardTitle tag="h2">Commercial PI</CardTitle>
+                  </Col>
+                  <Col sm="6">
+                    <ButtonGroup
+                      className="btn-group-toggle float-right"
+                      data-toggle="buttons"
+                    >
+                      <Button
+                        tag="openmarket"
+                        className={classNames("btn-simple", {
+                          active: smallChartData === "data1",
+                        })}
+                        color="info"
+                        id="0"
+                        size="sm"
+                        onClick={() => setSmChartData("data1")}
+                      >
+                        <span className="d-none d-sm-block d-md-block d-lg-block d-xl-block">
+                          Complete PI
+                        </span>
+                        <span className="d-block d-sm-none">
+                          <i className="tim-icons icon-single-02" />
+                        </span>
+                      </Button>
+                      <Button
+                        color="info"
+                        id="1"
+                        size="sm"
+                        tag="label"
+                        className={classNames("btn-simple", {
+                          active: smallChartData === "data2",
+                        })}
+                        onClick={() => setSmChartData("data2")}
+                      >
+                        <span className="d-none d-sm-block d-md-block d-lg-block d-xl-block">
+                          Year-wise PI
+                        </span>
+                        <span className="d-block d-sm-none">
+                          <i className="tim-icons icon-gift-2" />
+                        </span>
+                      </Button>
+                      <Button
+                        tag="label"
+                        className={classNames("btn-simple", {
+                          active: bigChartData === "data3",
+                        })}
+                        color="info"
+                        id="2"
+                        size="sm"
+                        onClick={() => setBgChartData("data3")}
+                      >
+                        <span className="d-none d-sm-block d-md-block d-lg-block d-xl-block">
+                          Facilities 2022
+                        </span>
+                        <span className="d-block d-sm-none">
+                          <i className="tim-icons icon-single-02" />
+                        </span>
+                      </Button>
+                    </ButtonGroup>
+                  </Col>
+                </Row>
+              </CardHeader>
+              <CardBody>
+                <div className="chart-area">
+                  <Bar
+                    data={chartExample4[smallChartData]}
                     options={chartExample4.options}
                   />
                 </div>
