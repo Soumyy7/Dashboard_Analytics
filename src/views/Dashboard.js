@@ -138,14 +138,15 @@ function Dashboard(props) {
           <Col lg="4">
             <Card className="card-chart">
               <CardHeader>
-                <h5 className="card-category">Total Shipments</h5>
+                <h5 className="card-category">2021 & 2022</h5>
                 <CardTitle tag="h3">
-                  <i className="tim-icons icon-bell-55 text-info" /> 763,215
+                  <i className="tim-icons icon-bell-55 text-info" /> Combined
+                  GWP
                 </CardTitle>
               </CardHeader>
               <CardBody>
                 <div className="chart-area">
-                  <Line
+                  <Bar
                     data={chartExample2.data}
                     options={chartExample2.options}
                   />
@@ -223,9 +224,7 @@ function Dashboard(props) {
                     <DropdownItem
                       href="#pablo"
                       onClick={(e) => e.preventDefault()}
-                    >
-                      Something else
-                    </DropdownItem>
+                    ></DropdownItem>
                   </DropdownMenu>
                 </UncontrolledDropdown>
               </CardHeader>

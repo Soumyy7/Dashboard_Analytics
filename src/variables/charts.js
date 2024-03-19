@@ -369,14 +369,38 @@ let chartExample2 = {
     gradientStroke.addColorStop(0.4, "rgba(29,140,248,0.0)");
     gradientStroke.addColorStop(0, "rgba(29,140,248,0)"); //blue colors
 
+    let gradientStroke2 = ctx.createLinearGradient(0, 230, 0, 50);
+
+    gradientStroke2.addColorStop(1, "rgba(255,160,122,0.2)"); // Lighter shade of orange
+    gradientStroke2.addColorStop(0.4, "rgba(255,160,122,0.0)"); // Transparent
+    gradientStroke2.addColorStop(0, "rgba(255,160,122,0)"); // Transparent
+    // orange colors
+
+    let gradientStroke3 = ctx.createLinearGradient(0, 230, 0, 50);
+
+    gradientStroke3.addColorStop(1, "rgba(0,214,180,0.2)"); // Lighter shade of the color
+    gradientStroke3.addColorStop(0.4, "rgba(0,214,180,0.0)"); // Transparent
+    gradientStroke3.addColorStop(0, "rgba(0,214,180,0)"); // Transparent
+
     return {
-      labels: ["JUL", "AUG", "SEP", "OCT", "NOV", "DEC"],
+      labels: [
+        "McGill",
+        "Aon ",
+        "Kentro",
+        "Balance",
+        "BMS",
+        "Hendersons",
+        "Marsh",
+        "Tysers",
+        "Convex",
+        "Miller ",
+      ],
       datasets: [
         {
-          label: "Data",
+          label: "Facilities",
           fill: true,
-          backgroundColor: gradientStroke,
-          borderColor: "#1f8ef1",
+          backgroundColor: gradientStroke3,
+          borderColor: "#00d6b4",
           borderWidth: 2,
           borderDash: [],
           borderDashOffset: 0.0,
@@ -387,12 +411,49 @@ let chartExample2 = {
           pointHoverRadius: 4,
           pointHoverBorderWidth: 15,
           pointRadius: 4,
-          data: [80, 100, 70, 80, 120, 80],
+          data: [
+            1543201.21306473, 1411405.6880274, 1165505.68757209,
+            1521446.12280799, 1671977.07255576, 874868.409520251,
+            618368.847325867, 438673.557896378, 658655.352033324,
+            641996.454116525,
+          ],
+        },
+        {
+          label: "Open Market",
+          fill: true,
+          backgroundColor: gradientStroke,
+          borderColor: "#1f8ef1",
+          borderWidth: 2,
+          borderDash: [],
+          borderDashOffset: 0.0,
+          pointBackgroundColor: "#00d6b4",
+          pointBorderColor: "rgba(255,255,255,0)",
+          pointHoverBackgroundColor: "#00d6b4",
+          pointBorderWidth: 20,
+          pointHoverRadius: 4,
+          pointHoverBorderWidth: 15,
+          pointRadius: 4,
+          data: [
+            1248695.3027999, 878427.068233009, 1094645.53549004,
+            508392.840293589, 330639.485402907, 907071.371239163,
+            1030212.52752967, 1152501.45542035, 931797.113540589,
+            783639.944951845,
+          ],
         },
       ],
     };
   },
-  options: chart1_2_options,
+  options: {
+    chart1_2_options,
+    scales: {
+      x: {
+        stacked: true,
+      },
+      y: {
+        stacked: true,
+      },
+    },
+  },
 };
 
 // #########################################
@@ -402,25 +463,48 @@ let chartExample3 = {
   data: (canvas) => {
     let ctx = canvas.getContext("2d");
 
-    let gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
+    // let gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
 
-    gradientStroke.addColorStop(1, "rgba(72,72,176,0.1)");
-    gradientStroke.addColorStop(0.4, "rgba(72,72,176,0.0)");
-    gradientStroke.addColorStop(0, "rgba(119,52,169,0)"); //purple colors
+    // gradientStroke.addColorStop(1, "rgba(72,72,176,0.1)");
+    // gradientStroke.addColorStop(0.4, "rgba(72,72,176,0.0)");
+    // gradientStroke.addColorStop(0, "rgba(119,52,169,0)"); //purple colors
+
+    let gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
+    gradientStroke.addColorStop(1, "rgba(255,153,187,0.2)"); // Lighter shade of pink with lower alpha
+    gradientStroke.addColorStop(0.4, "rgba(255,128,161,0.075)"); // Medium shade of pink with lower alpha
+    gradientStroke.addColorStop(0, "rgba(255,102,136,0.1)"); // Darker shade of pink with lower alpha
+
+    let gradientStroke3 = ctx.createLinearGradient(0, 230, 0, 50);
+
+    gradientStroke3.addColorStop(1, "rgba(255,160,122,0.2)"); // Lighter shade of orange
+    gradientStroke3.addColorStop(0.4, "rgba(255,160,122,0.075)"); // Transparent
+    gradientStroke3.addColorStop(0, "rgba(255,160,122,0)"); // Transparent
+    // orange colors
 
     return {
-      labels: ["USA", "GER", "AUS", "UK", "RO", "BR"],
+      labels: ["Bus.Plan", "Earn. Prem.", "GWP"],
       datasets: [
         {
-          label: "Countries",
+          label: "Commercial PI",
           fill: true,
-          backgroundColor: gradientStroke,
-          hoverBackgroundColor: gradientStroke,
-          borderColor: "#d048b6",
+          backgroundColor: gradientStroke3,
+          hoverBackgroundColor: gradientStroke3,
+          borderColor: "#FFA07A",
           borderWidth: 2,
           borderDash: [],
           borderDashOffset: 0.0,
-          data: [53, 20, 10, 80, 100, 45],
+          data: [35358859.7203035, 8394876.73535804, 10913339.7559654],
+        },
+        {
+          label: "Financial Institution",
+          fill: true,
+          backgroundColor: gradientStroke,
+          hoverBackgroundColor: gradientStroke,
+          borderColor: "#FF7FAB",
+          borderWidth: 2,
+          borderDash: [],
+          borderDashOffset: 0.0,
+          data: [34224486.3111017, 7015349.05072362, 9119953.76594071],
         },
       ],
     };
@@ -451,7 +535,7 @@ let chartExample3 = {
         ticks: {
           suggestedMin: 60,
           suggestedMax: 120,
-          padding: 20,
+          padding: 10,
           fontColor: "#9e9e9e",
         },
       },
@@ -461,8 +545,9 @@ let chartExample3 = {
           color: "rgba(225,78,202,0.1)",
           zeroLineColor: "transparent",
         },
+        stacked: false,
         ticks: {
-          padding: 20,
+          padding: 15,
           fontColor: "#9e9e9e",
         },
       },
