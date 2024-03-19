@@ -123,9 +123,9 @@ function Sidebar(props) {
                 );
               })}
               <li className="active-pro">
-                <ReactstrapNavLink href="https://leadenhallanalytics.com/">
+                <ReactstrapNavLink href="https://github.com/Soumyy7">
                   <i className="tim-icons icon-spaceship" />
-                  <p>Visit our Website</p>
+                  <p>Check out my GitHub</p>
                 </ReactstrapNavLink>
               </li>
             </Nav>
