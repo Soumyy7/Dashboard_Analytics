@@ -11,7 +11,7 @@ import FixedPlugin from "components/FixedPlugin/FixedPlugin.js";
 
 import routes from "routes.js";
 
-import logo from "assets/img/react-logo.png";
+import logo2 from "assets/img/logo2.webp";
 import { BackgroundColorContext } from "contexts/BackgroundColorContext";
 
 var ps;
@@ -89,8 +89,8 @@ function Admin(props) {
               routes={routes}
               logo={{
                 outterLink: "https://github.com/Soumyy7",
-                text: "Creative Tim",
-                imgSrc: logo,
+                text: "Leadenhall Analytics",
+                imgSrc: logo2,
               }}
               toggleSidebar={toggleSidebar}
             />
