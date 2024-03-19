@@ -54,7 +54,10 @@ function Dashboard(props) {
                 <Row>
                   <Col className="text-left" sm="6">
                     <h5 className="card-category">Performance</h5>
-                    <CardTitle tag="h2">Top 10 Brokers</CardTitle>
+                    <CardTitle tag="h2">
+                      <i className="tim-icons icon-pin" />
+                      Top 10 Brokers
+                    </CardTitle>
                   </Col>
                   <Col sm="6">
                     <ButtonGroup
@@ -150,8 +153,8 @@ function Dashboard(props) {
               <CardHeader>
                 <h5 className="card-category">2021 & 2022</h5>
                 <CardTitle tag="h3">
-                  <i className="tim-icons icon-bell-55 text-info" /> Combined
-                  GWP
+                  <i className="tim-icons icon-money-coins text-info" />{" "}
+                  Combined GWP
                 </CardTitle>
               </CardHeader>
               <CardBody>
@@ -167,10 +170,10 @@ function Dashboard(props) {
           <Col lg="4">
             <Card className="card-chart">
               <CardHeader>
-                <h5 className="card-category">Daily Sales</h5>
+                <h5 className="card-category">2021 & 2022</h5>
                 <CardTitle tag="h3">
-                  <i className="tim-icons icon-delivery-fast text-primary" />{" "}
-                  3,500€
+                  <i className="tim-icons icon-bank text-primary" /> PI vs
+                  Financial Institution
                 </CardTitle>
               </CardHeader>
               <CardBody>
@@ -205,8 +208,11 @@ function Dashboard(props) {
               <CardHeader>
                 <Row>
                   <Col className="text-left" sm="6">
-                    <h5 className="card-category">Performance</h5>
-                    <CardTitle tag="h2">Comm. PI</CardTitle>
+                    <h5 className="card-category">Summary</h5>
+                    <CardTitle tag="h2">
+                      <i className="tim-icons icon-single-02 text-primary" />
+                      Commercial PI
+                    </CardTitle>
                   </Col>
                   <Col sm="6">
                     <ButtonGroup
@@ -268,8 +274,11 @@ function Dashboard(props) {
               <CardHeader>
                 <Row>
                   <Col className="text-left" sm="6">
-                    <h5 className="card-category">Performance</h5>
-                    <CardTitle tag="h2">Financial Institution</CardTitle>
+                    <h5 className="card-category">Summary</h5>
+                    <CardTitle tag="h2">
+                      <i className="tim-icons icon-paper" />
+                      <span> </span>Financial Institution
+                    </CardTitle>
                   </Col>
                   <Col sm="6">
                     <ButtonGroup
@@ -287,7 +296,7 @@ function Dashboard(props) {
                         onClick={() => setMdChartData("data1")}
                       >
                         <span className="d-none d-sm-block d-md-block d-lg-block d-xl-block">
-                          Complete Financial Institution
+                          Financial Institution
                         </span>
                         <span className="d-block d-sm-none">
                           <i className="tim-icons icon-single-02" />

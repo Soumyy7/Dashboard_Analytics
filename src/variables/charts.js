@@ -51,18 +51,20 @@ let chartExample1 = {
   data1: (canvas) => {
     let ctx = canvas.getContext("2d");
 
+    let gradientStroke3 = ctx.createLinearGradient(0, 230, 0, 50);
+
+    gradientStroke3.addColorStop(1, "rgba(29,140,248,0.3)");
+    gradientStroke3.addColorStop(0.4, "rgba(29,140,248,0.15)");
+    gradientStroke3.addColorStop(0.4, "rgba(29,140,248,0.1)");
+    gradientStroke3.addColorStop(0, "rgba(29,140,248,0)"); //blue colors
+    // 1f8ef1
     let gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
 
-    gradientStroke.addColorStop(1, "rgba(29,140,248,0.2)");
-    gradientStroke.addColorStop(0.4, "rgba(29,140,248,0.0)");
-    gradientStroke.addColorStop(0, "rgba(29,140,248,0)"); //blue colors
-
-    let gradientStroke2 = ctx.createLinearGradient(0, 230, 0, 50);
-
-    gradientStroke2.addColorStop(1, "rgba(255,160,122,0.2)"); // Lighter shade of orange
-    gradientStroke2.addColorStop(0.4, "rgba(255,160,122,0.0)"); // Transparent
-    gradientStroke2.addColorStop(0, "rgba(255,160,122,0)"); // Transparent
-    // orange colors
+    gradientStroke.addColorStop(1, "rgba(66,134,121,0.3)");
+    gradientStroke.addColorStop(0.4, "rgba(66,134,121,0.15)"); //green colors
+    gradientStroke.addColorStop(0, "rgba(66,134,121,0.1)"); //green colors
+    gradientStroke.addColorStop(0, "rgba(66,134,121,0)"); //green colors
+    // 00d6b4
 
     return {
       labels: [
@@ -81,7 +83,7 @@ let chartExample1 = {
         {
           label: "GWP",
           fill: true,
-          backgroundColor: gradientStroke,
+          backgroundColor: gradientStroke3,
           borderColor: "#1f8ef1",
           borderWidth: 2,
           borderDash: [],
@@ -101,14 +103,14 @@ let chartExample1 = {
         {
           label: "Planned GWP",
           fill: true,
-          backgroundColor: gradientStroke2,
-          borderColor: "#FFA07A",
+          backgroundColor: gradientStroke,
+          borderColor: "#00d6b4",
           borderWidth: 2,
           borderDash: [],
           borderDashOffset: 0.0,
-          pointBackgroundColor: "#FF8C66",
+          pointBackgroundColor: "#00d6b4",
           pointBorderColor: "rgba(255,255,255,0)",
-          pointHoverBackgroundColor: "#FFA07A",
+          pointHoverBackgroundColor: "#00d6b4",
           pointBorderWidth: 20,
           pointHoverRadius: 4,
           pointHoverBorderWidth: 15,
@@ -124,18 +126,20 @@ let chartExample1 = {
   data2: (canvas) => {
     let ctx = canvas.getContext("2d");
 
+    let gradientStroke3 = ctx.createLinearGradient(0, 230, 0, 50);
+
+    gradientStroke3.addColorStop(1, "rgba(29,140,248,0.3)");
+    gradientStroke3.addColorStop(0.4, "rgba(29,140,248,0.15)");
+    gradientStroke3.addColorStop(0.4, "rgba(29,140,248,0.1)");
+    gradientStroke3.addColorStop(0, "rgba(29,140,248,0)"); //blue colors
+    // 1f8ef1
     let gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
 
-    gradientStroke.addColorStop(1, "rgba(29,140,248,0.2)");
-    gradientStroke.addColorStop(0.4, "rgba(29,140,248,0.0)");
-    gradientStroke.addColorStop(0, "rgba(29,140,248,0)"); //blue colors
-
-    let gradientStroke2 = ctx.createLinearGradient(0, 230, 0, 50);
-
-    gradientStroke2.addColorStop(1, "rgba(255,160,122,0.2)"); // Lighter shade of orange
-    gradientStroke2.addColorStop(0.4, "rgba(255,160,122,0.0)"); // Transparent
-    gradientStroke2.addColorStop(0, "rgba(255,160,122,0)"); // Transparent
-    // orange colors
+    gradientStroke.addColorStop(1, "rgba(66,134,121,0.3)");
+    gradientStroke.addColorStop(0.4, "rgba(66,134,121,0.15)"); //green colors
+    gradientStroke.addColorStop(0, "rgba(66,134,121,0.1)"); //green colors
+    gradientStroke.addColorStop(0, "rgba(66,134,121,0)"); //green colors
+    // 00d6b4
 
     return {
       labels: [
@@ -155,13 +159,13 @@ let chartExample1 = {
           label: "GWP",
           fill: true,
           backgroundColor: gradientStroke,
-          borderColor: "#1f8ef1",
+          borderColor: "#00d6b4",
           borderWidth: 2,
           borderDash: [],
           borderDashOffset: 0.0,
-          pointBackgroundColor: "#1f8ef1",
+          pointBackgroundColor: "#00d6b4",
           pointBorderColor: "rgba(255,255,255,0)",
-          pointHoverBackgroundColor: "#1f8ef1",
+          pointHoverBackgroundColor: "#00d6b4",
           pointBorderWidth: 20,
           pointHoverRadius: 4,
           pointHoverBorderWidth: 15,
@@ -176,14 +180,14 @@ let chartExample1 = {
         {
           label: "Planned GWP",
           fill: true,
-          backgroundColor: gradientStroke2,
-          borderColor: "#FFA07A",
+          backgroundColor: gradientStroke3,
+          borderColor: "#1f8ef1",
           borderWidth: 2,
           borderDash: [],
           borderDashOffset: 0.0,
-          pointBackgroundColor: "#FF8C66",
+          pointBackgroundColor: "#1f8ef1",
           pointBorderColor: "rgba(255,255,255,0)",
-          pointHoverBackgroundColor: "#FFA07A",
+          pointHoverBackgroundColor: "#1f8ef1",
           pointBorderWidth: 20,
           pointHoverRadius: 4,
           pointHoverBorderWidth: 15,
@@ -201,18 +205,20 @@ let chartExample1 = {
   data3: (canvas) => {
     let ctx = canvas.getContext("2d");
 
+    let gradientStroke3 = ctx.createLinearGradient(0, 230, 0, 50);
+
+    gradientStroke3.addColorStop(1, "rgba(29,140,248,0.3)");
+    gradientStroke3.addColorStop(0.4, "rgba(29,140,248,0.15)");
+    gradientStroke3.addColorStop(0.4, "rgba(29,140,248,0.1)");
+    gradientStroke3.addColorStop(0, "rgba(29,140,248,0)"); //blue colors
+    // 1f8ef1
     let gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
 
-    gradientStroke.addColorStop(1, "rgba(29,140,248,0.2)");
-    gradientStroke.addColorStop(0.4, "rgba(29,140,248,0.0)");
-    gradientStroke.addColorStop(0, "rgba(29,140,248,0)"); //blue colors
-
-    let gradientStroke2 = ctx.createLinearGradient(0, 230, 0, 50);
-
-    gradientStroke2.addColorStop(1, "rgba(255,160,122,0.2)"); // Lighter shade of orange
-    gradientStroke2.addColorStop(0.4, "rgba(255,160,122,0.0)"); // Transparent
-    gradientStroke2.addColorStop(0, "rgba(255,160,122,0)"); // Transparent
-    // orange colors
+    gradientStroke.addColorStop(1, "rgba(66,134,121,0.3)");
+    gradientStroke.addColorStop(0.4, "rgba(66,134,121,0.15)"); //green colors
+    gradientStroke.addColorStop(0, "rgba(66,134,121,0.1)"); //green colors
+    gradientStroke.addColorStop(0, "rgba(66,134,121,0)"); //green colors
+    // 00d6b4
 
     return {
       labels: [
@@ -231,7 +237,7 @@ let chartExample1 = {
         {
           label: "GWP",
           fill: true,
-          backgroundColor: gradientStroke,
+          backgroundColor: gradientStroke3,
           borderColor: "#1f8ef1",
           borderWidth: 2,
           borderDash: [],
@@ -253,14 +259,14 @@ let chartExample1 = {
         {
           label: "Planned GWP",
           fill: true,
-          backgroundColor: gradientStroke2,
-          borderColor: "#FFA07A",
+          backgroundColor: gradientStroke,
+          borderColor: "#00d6b4",
           borderWidth: 2,
           borderDash: [],
           borderDashOffset: 0.0,
-          pointBackgroundColor: "#FF8C66",
+          pointBackgroundColor: "#00d6b4",
           pointBorderColor: "rgba(255,255,255,0)",
-          pointHoverBackgroundColor: "#FFA07A",
+          pointHoverBackgroundColor: "#00d6b4",
           pointBorderWidth: 20,
           pointHoverRadius: 4,
           pointHoverBorderWidth: 15,
@@ -277,19 +283,20 @@ let chartExample1 = {
   },
   data4: (canvas) => {
     let ctx = canvas.getContext("2d");
+    let gradientStroke3 = ctx.createLinearGradient(0, 230, 0, 50);
 
+    gradientStroke3.addColorStop(1, "rgba(29,140,248,0.3)");
+    gradientStroke3.addColorStop(0.4, "rgba(29,140,248,0.15)");
+    gradientStroke3.addColorStop(0.4, "rgba(29,140,248,0.1)");
+    gradientStroke3.addColorStop(0, "rgba(29,140,248,0)"); //blue colors
+    // 1f8ef1
     let gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
 
-    gradientStroke.addColorStop(1, "rgba(29,140,248,0.2)");
-    gradientStroke.addColorStop(0.4, "rgba(29,140,248,0.0)");
-    gradientStroke.addColorStop(0, "rgba(29,140,248,0)"); //blue colors
-
-    let gradientStroke2 = ctx.createLinearGradient(0, 230, 0, 50);
-
-    gradientStroke2.addColorStop(1, "rgba(255,160,122,0.2)"); // Lighter shade of orange
-    gradientStroke2.addColorStop(0.4, "rgba(255,160,122,0.0)"); // Transparent
-    gradientStroke2.addColorStop(0, "rgba(255,160,122,0)"); // Transparent
-    // orange colors
+    gradientStroke.addColorStop(1, "rgba(66,134,121,0.3)");
+    gradientStroke.addColorStop(0.4, "rgba(66,134,121,0.15)"); //green colors
+    gradientStroke.addColorStop(0, "rgba(66,134,121,0.1)"); //green colors
+    gradientStroke.addColorStop(0, "rgba(66,134,121,0)"); //green colors
+    // 00d6b4
 
     return {
       labels: [
@@ -309,13 +316,13 @@ let chartExample1 = {
           label: "GWP",
           fill: true,
           backgroundColor: gradientStroke,
-          borderColor: "#1f8ef1",
+          borderColor: "#00d6b4",
           borderWidth: 2,
           borderDash: [],
           borderDashOffset: 0.0,
-          pointBackgroundColor: "#1f8ef1",
+          pointBackgroundColor: "#00d6b4",
           pointBorderColor: "rgba(255,255,255,0)",
-          pointHoverBackgroundColor: "#1f8ef1",
+          pointHoverBackgroundColor: "#00d6b4",
           pointBorderWidth: 20,
           pointHoverRadius: 4,
           pointHoverBorderWidth: 15,
@@ -330,14 +337,14 @@ let chartExample1 = {
         {
           label: "Planned GWP",
           fill: true,
-          backgroundColor: gradientStroke2,
-          borderColor: "#FFA07A",
+          backgroundColor: gradientStroke3,
+          borderColor: "#1f8ef1",
           borderWidth: 2,
           borderDash: [],
           borderDashOffset: 0.0,
-          pointBackgroundColor: "#FF8C66",
+          pointBackgroundColor: "#1f8ef1",
           pointBorderColor: "rgba(255,255,255,0)",
-          pointHoverBackgroundColor: "#FFA07A",
+          pointHoverBackgroundColor: "#1f8ef1",
           pointBorderWidth: 20,
           pointHoverRadius: 4,
           pointHoverBorderWidth: 15,
@@ -363,24 +370,20 @@ let chartExample2 = {
   data: (canvas) => {
     let ctx = canvas.getContext("2d");
 
-    let gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
-
-    gradientStroke.addColorStop(1, "rgba(29,140,248,0.2)");
-    gradientStroke.addColorStop(0.4, "rgba(29,140,248,0.0)");
-    gradientStroke.addColorStop(0, "rgba(29,140,248,0)"); //blue colors
-
-    let gradientStroke2 = ctx.createLinearGradient(0, 230, 0, 50);
-
-    gradientStroke2.addColorStop(1, "rgba(255,160,122,0.2)"); // Lighter shade of orange
-    gradientStroke2.addColorStop(0.4, "rgba(255,160,122,0.0)"); // Transparent
-    gradientStroke2.addColorStop(0, "rgba(255,160,122,0)"); // Transparent
-    // orange colors
-
     let gradientStroke3 = ctx.createLinearGradient(0, 230, 0, 50);
 
-    gradientStroke3.addColorStop(1, "rgba(0,214,180,0.2)"); // Lighter shade of the color
-    gradientStroke3.addColorStop(0.4, "rgba(0,214,180,0.0)"); // Transparent
-    gradientStroke3.addColorStop(0, "rgba(0,214,180,0)"); // Transparent
+    gradientStroke3.addColorStop(1, "rgba(29,140,248,0.3)");
+    gradientStroke3.addColorStop(0.4, "rgba(29,140,248,0.15)");
+    gradientStroke3.addColorStop(0.4, "rgba(29,140,248,0.1)");
+    gradientStroke3.addColorStop(0, "rgba(29,140,248,0)"); //blue colors
+    // 1f8ef1
+    let gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
+
+    gradientStroke.addColorStop(1, "rgba(66,134,121,0.3)");
+    gradientStroke.addColorStop(0.4, "rgba(66,134,121,0.15)"); //green colors
+    gradientStroke.addColorStop(0, "rgba(66,134,121,0.1)"); //green colors
+    gradientStroke.addColorStop(0, "rgba(66,134,121,0)"); //green colors
+    // 00d6b4
 
     return {
       labels: [
@@ -399,14 +402,14 @@ let chartExample2 = {
         {
           label: "Facilities",
           fill: true,
-          backgroundColor: gradientStroke3,
+          backgroundColor: gradientStroke,
           borderColor: "#00d6b4",
           borderWidth: 2,
           borderDash: [],
           borderDashOffset: 0.0,
-          pointBackgroundColor: "#1f8ef1",
+          pointBackgroundColor: "#00d6b4",
           pointBorderColor: "rgba(255,255,255,0)",
-          pointHoverBackgroundColor: "#1f8ef1",
+          pointHoverBackgroundColor: "#00d6b4",
           pointBorderWidth: 20,
           pointHoverRadius: 4,
           pointHoverBorderWidth: 15,
@@ -421,14 +424,14 @@ let chartExample2 = {
         {
           label: "Open Market",
           fill: true,
-          backgroundColor: gradientStroke,
+          backgroundColor: gradientStroke3,
           borderColor: "#1f8ef1",
           borderWidth: 2,
           borderDash: [],
           borderDashOffset: 0.0,
-          pointBackgroundColor: "#00d6b4",
+          pointBackgroundColor: "#1f8ef1",
           pointBorderColor: "rgba(255,255,255,0)",
-          pointHoverBackgroundColor: "#00d6b4",
+          pointHoverBackgroundColor: "#1f8ef1",
           pointBorderWidth: 20,
           pointHoverRadius: 4,
           pointHoverBorderWidth: 15,
@@ -463,23 +466,20 @@ let chartExample3 = {
   data: (canvas) => {
     let ctx = canvas.getContext("2d");
 
-    // let gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
-
-    // gradientStroke.addColorStop(1, "rgba(72,72,176,0.1)");
-    // gradientStroke.addColorStop(0.4, "rgba(72,72,176,0.0)");
-    // gradientStroke.addColorStop(0, "rgba(119,52,169,0)"); //purple colors
-
-    let gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
-    gradientStroke.addColorStop(1, "rgba(255,153,187,0.2)"); // Lighter shade of pink with lower alpha
-    gradientStroke.addColorStop(0.4, "rgba(255,128,161,0.075)"); // Medium shade of pink with lower alpha
-    gradientStroke.addColorStop(0, "rgba(255,102,136,0.1)"); // Darker shade of pink with lower alpha
-
     let gradientStroke3 = ctx.createLinearGradient(0, 230, 0, 50);
 
-    gradientStroke3.addColorStop(1, "rgba(255,160,122,0.2)"); // Lighter shade of orange
-    gradientStroke3.addColorStop(0.4, "rgba(255,160,122,0.075)"); // Transparent
-    gradientStroke3.addColorStop(0, "rgba(255,160,122,0)"); // Transparent
-    // orange colors
+    gradientStroke3.addColorStop(1, "rgba(29,140,248,0.3)");
+    gradientStroke3.addColorStop(0.4, "rgba(29,140,248,0.15)");
+    gradientStroke3.addColorStop(0.4, "rgba(29,140,248,0.1)");
+    gradientStroke3.addColorStop(0, "rgba(29,140,248,0)"); //blue colors
+    // 1f8ef1
+    let gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
+
+    gradientStroke.addColorStop(1, "rgba(66,134,121,0.3)");
+    gradientStroke.addColorStop(0.4, "rgba(66,134,121,0.15)"); //green colors
+    gradientStroke.addColorStop(0, "rgba(66,134,121,0.1)"); //green colors
+    gradientStroke.addColorStop(0, "rgba(66,134,121,0)"); //green colors
+    // 00d6b4
 
     return {
       labels: ["Bus.Plan", "Earn. Prem.", "GWP"],
@@ -487,9 +487,9 @@ let chartExample3 = {
         {
           label: "Commercial PI",
           fill: true,
-          backgroundColor: gradientStroke3,
-          hoverBackgroundColor: gradientStroke3,
-          borderColor: "#FFA07A",
+          backgroundColor: gradientStroke,
+          hoverBackgroundColor: gradientStroke,
+          borderColor: "#00d6b4",
           borderWidth: 2,
           borderDash: [],
           borderDashOffset: 0.0,
@@ -498,9 +498,9 @@ let chartExample3 = {
         {
           label: "Financial Institution",
           fill: true,
-          backgroundColor: gradientStroke,
-          hoverBackgroundColor: gradientStroke,
-          borderColor: "#FF7FAB",
+          backgroundColor: gradientStroke3,
+          hoverBackgroundColor: gradientStroke3,
+          borderColor: "#1f8ef1",
           borderWidth: 2,
           borderDash: [],
           borderDashOffset: 0.0,
@@ -562,25 +562,13 @@ const chartExample4 = {
   data1: (canvas) => {
     let ctx = canvas.getContext("2d");
 
-    let gradientStroke3 = ctx.createLinearGradient(0, 230, 0, 50);
-
-    gradientStroke3.addColorStop(1, "rgba(29,140,248,0.2)");
-    gradientStroke3.addColorStop(0.4, "rgba(29,140,248,0.0)");
-    gradientStroke3.addColorStop(0, "rgba(29,140,248,0)"); //blue colors
-
-    let gradientStroke2 = ctx.createLinearGradient(0, 230, 0, 50);
-
-    gradientStroke2.addColorStop(1, "rgba(255,160,122,0.2)"); // Lighter shade of orange
-    gradientStroke2.addColorStop(0.4, "rgba(255,160,122,0.0)"); // Transparent
-    gradientStroke2.addColorStop(0, "rgba(255,160,122,0)"); // Transparent
-    // orange colors
-
     let gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
 
-    gradientStroke.addColorStop(1, "rgba(66,134,121,0.15)");
-    gradientStroke.addColorStop(0.4, "rgba(66,134,121,0.0)"); //green colors
+    gradientStroke.addColorStop(1, "rgba(66,134,121,0.3)");
+    gradientStroke.addColorStop(0.4, "rgba(66,134,121,0.15)"); //green colors
+    gradientStroke.addColorStop(0, "rgba(66,134,121,0.1)"); //green colors
     gradientStroke.addColorStop(0, "rgba(66,134,121,0)"); //green colors
-
+    // 00d6b4
     return {
       labels: ["Business Plan", "Earn.Premium", "GWP"],
       datasets: [
@@ -653,24 +641,26 @@ const chartExample4 = {
   data2: (canvas) => {
     let ctx = canvas.getContext("2d");
 
+    let gradientStroke6 = ctx.createLinearGradient(0, 230, 0, 50);
+    gradientStroke6.addColorStop(1, "rgba(255,255,255,0.3)"); // Lighter shade of white with lower alpha
+    gradientStroke6.addColorStop(0.6, "rgba(255,255,255,0.15)"); // Medium shade of white with lower alpha
+    gradientStroke6.addColorStop(0.2, "rgba(255,255,255,0.1)"); // Darker shade of white with lower alpha
+    gradientStroke6.addColorStop(0, "rgba(255,255,255,0)"); // Transparent towards the bottom
+
     let gradientStroke3 = ctx.createLinearGradient(0, 230, 0, 50);
 
-    gradientStroke3.addColorStop(1, "rgba(29,140,248,0.2)");
-    gradientStroke3.addColorStop(0.4, "rgba(29,140,248,0.0)");
+    gradientStroke3.addColorStop(1, "rgba(29,140,248,0.3)");
+    gradientStroke3.addColorStop(0.4, "rgba(29,140,248,0.15)");
+    gradientStroke3.addColorStop(0.4, "rgba(29,140,248,0.1)");
     gradientStroke3.addColorStop(0, "rgba(29,140,248,0)"); //blue colors
-
-    let gradientStroke2 = ctx.createLinearGradient(0, 230, 0, 50);
-
-    gradientStroke2.addColorStop(1, "rgba(255,160,122,0.2)"); // Lighter shade of orange
-    gradientStroke2.addColorStop(0.4, "rgba(255,160,122,0.0)"); // Transparent
-    gradientStroke2.addColorStop(0, "rgba(255,160,122,0)"); // Transparent
-    // orange colors
-
+    // 1f8ef1
     let gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
 
-    gradientStroke.addColorStop(1, "rgba(66,134,121,0.15)");
-    gradientStroke.addColorStop(0.4, "rgba(66,134,121,0.0)"); //green colors
+    gradientStroke.addColorStop(1, "rgba(66,134,121,0.3)");
+    gradientStroke.addColorStop(0.4, "rgba(66,134,121,0.15)"); //green colors
+    gradientStroke.addColorStop(0, "rgba(66,134,121,0.1)"); //green colors
     gradientStroke.addColorStop(0, "rgba(66,134,121,0)"); //green colors
+    // 00d6b4
 
     return {
       labels: ["PI 2021", "PI 2022"],
@@ -695,14 +685,14 @@ const chartExample4 = {
         {
           label: "Earned Premium",
           fill: true,
-          backgroundColor: gradientStroke,
-          borderColor: "#00d6b4",
+          backgroundColor: gradientStroke3,
+          borderColor: "#1f8ef1",
           borderWidth: 2,
           borderDash: [],
           borderDashOffset: 0.0,
-          pointBackgroundColor: "#00d6b4",
+          pointBackgroundColor: "#1f8ef1",
           pointBorderColor: "rgba(255,255,255,0)",
-          pointHoverBackgroundColor: "#00d6b4",
+          pointHoverBackgroundColor: "#1f8ef1",
           pointBorderWidth: 20,
           pointHoverRadius: 4,
           pointHoverBorderWidth: 15,
@@ -712,14 +702,14 @@ const chartExample4 = {
         {
           label: "GWP",
           fill: true,
-          backgroundColor: gradientStroke,
-          borderColor: "#00d6b4",
+          backgroundColor: gradientStroke6,
+          borderColor: "#C0C0C0",
           borderWidth: 2,
           borderDash: [],
           borderDashOffset: 0.0,
-          pointBackgroundColor: "#00d6b4",
+          pointBackgroundColor: "#C0C0C0",
           pointBorderColor: "rgba(255,255,255,0)",
-          pointHoverBackgroundColor: "#00d6b4",
+          pointHoverBackgroundColor: "#C0C0C0",
           pointBorderWidth: 20,
           pointHoverRadius: 4,
           pointHoverBorderWidth: 15,
@@ -737,23 +727,18 @@ const chartExample5 = {
 
     let gradientStroke3 = ctx.createLinearGradient(0, 230, 0, 50);
 
-    gradientStroke3.addColorStop(1, "rgba(29,140,248,0.2)");
-    gradientStroke3.addColorStop(0.4, "rgba(29,140,248,0.0)");
+    gradientStroke3.addColorStop(1, "rgba(29,140,248,0.3)");
+    gradientStroke3.addColorStop(0.4, "rgba(29,140,248,0.15)");
+    gradientStroke3.addColorStop(0.4, "rgba(29,140,248,0.1)");
     gradientStroke3.addColorStop(0, "rgba(29,140,248,0)"); //blue colors
-
-    let gradientStroke2 = ctx.createLinearGradient(0, 230, 0, 50);
-
-    gradientStroke2.addColorStop(1, "rgba(255,160,122,0.2)"); // Lighter shade of orange
-    gradientStroke2.addColorStop(0.4, "rgba(255,160,122,0.0)"); // Transparent
-    gradientStroke2.addColorStop(0, "rgba(255,160,122,0)"); // Transparent
-    // orange colors
-
+    // 1f8ef1
     let gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
 
-    gradientStroke.addColorStop(1, "rgba(66,134,121,0.15)");
-    gradientStroke.addColorStop(0.4, "rgba(66,134,121,0.0)"); //green colors
+    gradientStroke.addColorStop(1, "rgba(66,134,121,0.3)");
+    gradientStroke.addColorStop(0.4, "rgba(66,134,121,0.15)"); //green colors
+    gradientStroke.addColorStop(0, "rgba(66,134,121,0.1)"); //green colors
     gradientStroke.addColorStop(0, "rgba(66,134,121,0)"); //green colors
-
+    // 00d6b4
     return {
       labels: ["Business Plan", "Earned Premium", "GWP"],
       datasets: [
@@ -777,14 +762,14 @@ const chartExample5 = {
         {
           label: "2022",
           fill: true,
-          backgroundColor: gradientStroke,
-          borderColor: "#00d6b4",
+          backgroundColor: gradientStroke3,
+          borderColor: "#1f8ef1",
           borderWidth: 2,
           borderDash: [],
           borderDashOffset: 0.0,
-          pointBackgroundColor: "#00d6b4",
+          pointBackgroundColor: "#1f8ef1",
           pointBorderColor: "rgba(255,255,255,0)",
-          pointHoverBackgroundColor: "#00d6b4",
+          pointHoverBackgroundColor: "#1f8ef1",
           pointBorderWidth: 20,
           pointHoverRadius: 4,
           pointHoverBorderWidth: 15,
@@ -800,23 +785,18 @@ const chartExample5 = {
 
     let gradientStroke3 = ctx.createLinearGradient(0, 230, 0, 50);
 
-    gradientStroke3.addColorStop(1, "rgba(29,140,248,0.2)");
-    gradientStroke3.addColorStop(0.4, "rgba(29,140,248,0.0)");
+    gradientStroke3.addColorStop(1, "rgba(29,140,248,0.3)");
+    gradientStroke3.addColorStop(0.4, "rgba(29,140,248,0.15)");
+    gradientStroke3.addColorStop(0.4, "rgba(29,140,248,0.1)");
     gradientStroke3.addColorStop(0, "rgba(29,140,248,0)"); //blue colors
-
-    let gradientStroke2 = ctx.createLinearGradient(0, 230, 0, 50);
-
-    gradientStroke2.addColorStop(1, "rgba(255,160,122,0.2)"); // Lighter shade of orange
-    gradientStroke2.addColorStop(0.4, "rgba(255,160,122,0.0)"); // Transparent
-    gradientStroke2.addColorStop(0, "rgba(255,160,122,0)"); // Transparent
-    // orange colors
-
+    // 1f8ef1
     let gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
 
-    gradientStroke.addColorStop(1, "rgba(66,134,121,0.15)");
-    gradientStroke.addColorStop(0.4, "rgba(66,134,121,0.0)"); //green colors
+    gradientStroke.addColorStop(1, "rgba(66,134,121,0.3)");
+    gradientStroke.addColorStop(0.4, "rgba(66,134,121,0.15)"); //green colors
+    gradientStroke.addColorStop(0, "rgba(66,134,121,0.1)"); //green colors
     gradientStroke.addColorStop(0, "rgba(66,134,121,0)"); //green colors
-
+    // 00d6b4
     return {
       labels: ["Business Plan", "Earn.Premium", "GWP"],
       datasets: [
@@ -840,14 +820,14 @@ const chartExample5 = {
         {
           label: "Crime 2022",
           fill: true,
-          backgroundColor: gradientStroke,
-          borderColor: "#00d6b4",
+          backgroundColor: gradientStroke3,
+          borderColor: "#1f8ef1",
           borderWidth: 2,
           borderDash: [],
           borderDashOffset: 0.0,
-          pointBackgroundColor: "#00d6b4",
+          pointBackgroundColor: "#1f8ef1",
           pointBorderColor: "rgba(255,255,255,0)",
-          pointHoverBackgroundColor: "#00d6b4",
+          pointHoverBackgroundColor: "#1f8ef1",
           pointBorderWidth: 20,
           pointHoverRadius: 4,
           pointHoverBorderWidth: 15,
@@ -862,23 +842,18 @@ const chartExample5 = {
 
     let gradientStroke3 = ctx.createLinearGradient(0, 230, 0, 50);
 
-    gradientStroke3.addColorStop(1, "rgba(29,140,248,0.2)");
-    gradientStroke3.addColorStop(0.4, "rgba(29,140,248,0.0)");
+    gradientStroke3.addColorStop(1, "rgba(29,140,248,0.3)");
+    gradientStroke3.addColorStop(0.4, "rgba(29,140,248,0.15)");
+    gradientStroke3.addColorStop(0.4, "rgba(29,140,248,0.1)");
     gradientStroke3.addColorStop(0, "rgba(29,140,248,0)"); //blue colors
-
-    let gradientStroke2 = ctx.createLinearGradient(0, 230, 0, 50);
-
-    gradientStroke2.addColorStop(1, "rgba(255,160,122,0.2)"); // Lighter shade of orange
-    gradientStroke2.addColorStop(0.4, "rgba(255,160,122,0.0)"); // Transparent
-    gradientStroke2.addColorStop(0, "rgba(255,160,122,0)"); // Transparent
-    // orange colors
-
+    // 1f8ef1
     let gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
 
-    gradientStroke.addColorStop(1, "rgba(66,134,121,0.15)");
-    gradientStroke.addColorStop(0.4, "rgba(66,134,121,0.0)"); //green colors
+    gradientStroke.addColorStop(1, "rgba(66,134,121,0.3)");
+    gradientStroke.addColorStop(0.4, "rgba(66,134,121,0.15)"); //green colors
+    gradientStroke.addColorStop(0, "rgba(66,134,121,0.1)"); //green colors
     gradientStroke.addColorStop(0, "rgba(66,134,121,0)"); //green colors
-
+    // 00d6b4
     return {
       labels: ["Business Plan", "Earn.Premium", "GWP"],
       datasets: [
@@ -902,14 +877,14 @@ const chartExample5 = {
         {
           label: "D&O 2022",
           fill: true,
-          backgroundColor: gradientStroke,
-          borderColor: "#00d6b4",
+          backgroundColor: gradientStroke3,
+          borderColor: "#1f8ef1",
           borderWidth: 2,
           borderDash: [],
           borderDashOffset: 0.0,
-          pointBackgroundColor: "#00d6b4",
+          pointBackgroundColor: "#1f8ef1",
           pointBorderColor: "rgba(255,255,255,0)",
-          pointHoverBackgroundColor: "#00d6b4",
+          pointHoverBackgroundColor: "#1f8ef1",
           pointBorderWidth: 20,
           pointHoverRadius: 4,
           pointHoverBorderWidth: 15,
@@ -925,23 +900,18 @@ const chartExample5 = {
 
     let gradientStroke3 = ctx.createLinearGradient(0, 230, 0, 50);
 
-    gradientStroke3.addColorStop(1, "rgba(29,140,248,0.2)");
-    gradientStroke3.addColorStop(0.4, "rgba(29,140,248,0.0)");
+    gradientStroke3.addColorStop(1, "rgba(29,140,248,0.3)");
+    gradientStroke3.addColorStop(0.4, "rgba(29,140,248,0.15)");
+    gradientStroke3.addColorStop(0.4, "rgba(29,140,248,0.1)");
     gradientStroke3.addColorStop(0, "rgba(29,140,248,0)"); //blue colors
-
-    let gradientStroke2 = ctx.createLinearGradient(0, 230, 0, 50);
-
-    gradientStroke2.addColorStop(1, "rgba(255,160,122,0.2)"); // Lighter shade of orange
-    gradientStroke2.addColorStop(0.4, "rgba(255,160,122,0.0)"); // Transparent
-    gradientStroke2.addColorStop(0, "rgba(255,160,122,0)"); // Transparent
-    // orange colors
-
+    // 1f8ef1
     let gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
 
-    gradientStroke.addColorStop(1, "rgba(66,134,121,0.15)");
-    gradientStroke.addColorStop(0.4, "rgba(66,134,121,0.0)"); //green colors
+    gradientStroke.addColorStop(1, "rgba(66,134,121,0.3)");
+    gradientStroke.addColorStop(0.4, "rgba(66,134,121,0.15)"); //green colors
+    gradientStroke.addColorStop(0, "rgba(66,134,121,0.1)"); //green colors
     gradientStroke.addColorStop(0, "rgba(66,134,121,0)"); //green colors
-
+    // 00d6b4
     return {
       labels: ["Business Plan", "Earn.Premium", "GWP"],
       datasets: [
@@ -965,14 +935,14 @@ const chartExample5 = {
         {
           label: "FIPI 2022",
           fill: true,
-          backgroundColor: gradientStroke,
-          borderColor: "#00d6b4",
+          backgroundColor: gradientStroke3,
+          borderColor: "#1f8ef1",
           borderWidth: 2,
           borderDash: [],
           borderDashOffset: 0.0,
-          pointBackgroundColor: "#00d6b4",
+          pointBackgroundColor: "#1f8ef1",
           pointBorderColor: "rgba(255,255,255,0)",
-          pointHoverBackgroundColor: "#00d6b4",
+          pointHoverBackgroundColor: "#1f8ef1",
           pointBorderWidth: 20,
           pointHoverRadius: 4,
           pointHoverBorderWidth: 15,
