@@ -178,23 +178,6 @@ function Dashboard(props) {
             </Card>
           </Col>
           <Col lg="4">
-            {/* <Card className="card-chart">
-              <CardHeader>
-                <h5 className="card-category">2021 & 2022</h5>
-                <CardTitle tag="h3">
-                  <i className="tim-icons icon-send text-success" /> Commercial
-                  PI
-                </CardTitle>
-              </CardHeader>
-              <CardBody>
-                <div className="chart-area">
-                  <Bar
-                    data={chartExample4.data1}
-                    options={chartExample4.options}
-                  />
-                </div>
-              </CardBody>
-            </Card> */}
             <Card className="card-chart">
               <CardHeader>
                 <Row>

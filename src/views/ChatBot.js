@@ -64,9 +64,6 @@ function ChatBot() {
       };
     });
 
-    // Get the request body set up with the model we plan to use
-    // and the messages which we formatted above. We add a system message in the front to'
-    // determine how we want chatGPT to act.
     const apiRequestBody = {
       model: "gpt-3.5-turbo",
       messages: [
@@ -76,30 +73,6 @@ function ChatBot() {
       // stream: false,
     };
 
-    // await fetch("https://api.openai.com/v1/chat/completions", {
-    //   method: "POST",
-    //   headers: {
-    //     Authorization: "Bearer " + chatbot_key,
-    //     "Content-Type": "application/json",
-    //     response_format: { type: "json_object" },
-    //   },
-    //   body: JSON.stringify(apiRequestBody),
-    // })
-    //   .then((data) => {
-    //     return data.json();
-    //   })
-    //   .then((data) => {
-    //     console.log(data);
-    //     setMessages([
-    //       ...chatMessages,
-    //       {
-    //         message: data.choices[0].message.content,
-    //         sender: "ChatGPT",
-    //         direction: "incoming",
-    //       },
-    //     ]);
-    //     setIsTyping(false);
-    //   });
     await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
