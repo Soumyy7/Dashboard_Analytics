@@ -1,6 +1,6 @@
 import ChatBot from "views/ChatBot";
 import Dashboard from "views/Dashboard.js";
-import TableList from "views/TableList.js";
+// import TableList from "views/TableList.js";
 
 var routes = [
   {
@@ -8,13 +8,6 @@ var routes = [
     name: "Dashboard",
     icon: "tim-icons icon-chart-pie-36",
     component: <Dashboard />,
-    layout: "/admin",
-  },
-  {
-    path: "/tables",
-    name: "Table List",
-    icon: "tim-icons icon-puzzle-10",
-    component: <TableList />,
     layout: "/admin",
   },
   {
