@@ -5,7 +5,7 @@
 
 # Features
 1. Dashboard Interface: Utilizes **Bootstrap** to create a clean and responsive user interface for displaying data.
-2. Charts: Implements **Chart.js** and **React Charts 2** to visualize data in various chart formats such as line charts, bar charts, and pie charts.
+2. Charts: Implements **Chart.js** and **React Charts 2** to visualize data in various chart formats such as line charts and bar charts.
 3. Chatbot Integration: Integrates with the **OpenAI API** for chat completion, providing users with a conversational interface to interact with the dashboard.
 4. Chat Interface: Utilizes **Chatscope** to build a user-friendly chat interface for seamless communication with the chatbot.
 
