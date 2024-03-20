@@ -4,15 +4,9 @@ import { NavLink, Link, useLocation } from "react-router-dom";
 // nodejs library to set properties for components
 import { PropTypes } from "prop-types";
 
-// javascript plugin used to create scrollbars on windows
-// import PerfectScrollbar from "perfect-scrollbar";
-
 // reactstrap components
 import { Nav, NavLink as ReactstrapNavLink } from "reactstrap";
-import {
-  BackgroundColorContext,
-  backgroundColors,
-} from "contexts/BackgroundColorContext";
+import { BackgroundColorContext } from "contexts/BackgroundColorContext";
 
 var ps;
 
@@ -23,20 +17,7 @@ function Sidebar(props) {
   const activeRoute = (routeName) => {
     return location.pathname === routeName ? "active" : "";
   };
-  // React.useEffect(() => {
-  //   if (navigator.platform.indexOf("Win") > -1) {
-  //     ps = new PerfectScrollbar(sidebarRef.current, {
-  //       suppressScrollX: true,
-  //       suppressScrollY: false,
-  //     });
-  //   }
-  //   // Specify how to clean up after this effect:
-  //   return function cleanup() {
-  //     if (navigator.platform.indexOf("Win") > -1) {
-  //       ps.destroy();
-  //     }
-  //   };
-  // });
+
   const linkOnClick = () => {
     document.documentElement.classList.remove("nav-open");
   };
