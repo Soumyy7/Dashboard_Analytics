@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../assets/css/ChatBot.css";
+// import "./assets/css/ChatBot.css";
 import "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
 import {
   MainContainer,
@@ -17,11 +17,11 @@ const systemMessage = {
   content: prompt,
 };
 
-function ChatBot() {
+function Bot() {
   const [messages, setMessages] = useState([
     {
       message:
-        "Welcome! I'm your website's personal Bot. I'm here to assist you in understanding the data presented. Let's get started!",
+        "Hello, I'm this website's own Bot! I can help you with various things that will help you understand the data presented here better",
       sentTime: "just now",
       sender: "ChatGPT",
       direction: "incoming",
@@ -99,33 +99,13 @@ function ChatBot() {
         setIsTyping(false);
       });
   }
-  // top: "67px", // Adjust as needed
-  // left: "280px", // Adjust as needed
-  // bottom: "55px", // Adjust as needed
-  // right: "5px",
+
   return (
-    <div
-      style={{
-        position: "absolute",
-        top: "67px", // Adjust as needed
-        left: "280px", // Adjust as needed
-        bottom: "5px", // Adjust as needed
-        right: "5px",
-        overflow: "hidden",
-        borderRadius: "10px", // Adjust border radius as needed
-        padding: "10px", // Adjust padding as needed
-        display: "flex",
-        // backgroundColor: "pink",
-        flexDirection: "column",
-      }}
-    >
-      <MainContainer
-        style={{ flex: 1, marginRight: "15px", borderRadius: "10px" }}
-      >
+    <div className="content">
+      <MainContainer>
         <ChatContainer>
           <MessageList
             scrollBehavior="smooth"
-            style={{ backgroundColor: "#a0d2eb", borderRadius: "10px" }}
             typingIndicator={
               isTyping ? (
                 <TypingIndicator content="Leadenhall Bot is typing" />
@@ -133,36 +113,20 @@ function ChatBot() {
             }
           >
             {messages.map((message, i) => {
-              return (
-                <Message
-                  key={i}
-                  model={message}
-                  style={{
-                    borderRadius: "5px",
-                    marginTop: "50px",
-                    marginRight: "30px",
-                  }}
-                />
-              );
+              console.log(message);
+              return <Message key={i} model={message} />;
             })}
           </MessageList>
+          <MessageInput
+            // autoCorrect={false}
+            placeholder="Type message here"
+            onSend={handleSend}
+            defaultValue=""
+          />
         </ChatContainer>
       </MainContainer>
-      <div style={{ marginTop: "10px" }}>
-        <MessageInput
-          // autoCorrect={false}
-          placeholder="Type message here"
-          onSend={handleSend}
-          defaultValue=""
-          style={{
-            borderRadius: "10px", // Adjust the value as needed to control the amount of curvature
-            padding: "5px 10px", // Adjust padding as needed
-            marginRight: "15px",
-          }}
-        />
-      </div>
     </div>
   );
 }
 
-export default ChatBot;
+export default Bot;

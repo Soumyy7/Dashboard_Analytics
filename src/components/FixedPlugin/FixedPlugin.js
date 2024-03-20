@@ -1,6 +1,6 @@
 import React from "react";
 import { Dropdown, DropdownToggle } from "reactstrap";
-import ChatBot from "views/ChatBot";
+import Bot from "views/Bot2";
 
 function FixedPlugin(props) {
   const [dropDownIsOpen, setdropDownIsOpen] = React.useState(false);
@@ -21,7 +21,7 @@ function FixedPlugin(props) {
             <>
               <li className="header-title">Welcome to ChatBot</li>
               <li className="adjustments-line">
-                <ChatBot />
+                <Bot />
               </li>
             </>
           )}

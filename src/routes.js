@@ -14,7 +14,6 @@ var routes = [
     path: "/chatbot",
     name: "ChatBot",
     icon: "tim-icons icon-chat-33",
-    // icon: "tim-icons icon-support-17",
     component: <ChatBot />,
     layout: "/admin",
   },

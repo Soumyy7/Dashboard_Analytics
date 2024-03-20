@@ -25,6 +25,7 @@ function Admin(props) {
       }
     });
   };
+
   return (
     <BackgroundColorContext.Consumer>
       {({ color, changeColor }) => (
