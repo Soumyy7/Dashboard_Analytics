@@ -13,13 +13,7 @@ import { BackgroundColorContext } from "contexts/BackgroundColorContext";
 
 function Admin(props) {
   const mainPanelRef = React.useRef(null);
-  // const [sidebarOpened, setsidebarOpened] = React.useState(
-  //   document.documentElement.className.indexOf("nav-open") !== -1
-  // );
-  // const toggleSidebar = () => {
-  //   document.documentElement.classList.toggle("nav-open");
-  //   setsidebarOpened(!sidebarOpened);
-  // };
+
   const getRoutes = (routes) => {
     return routes.map((prop, key) => {
       if (prop.layout === "/admin") {
@@ -43,14 +37,9 @@ function Admin(props) {
                 text: "LeadenHall",
                 imgSrc: logo2,
               }}
-              // toggleSidebar={toggleSidebar}
             />
             <div className="main-panel" ref={mainPanelRef} data={color}>
-              <AdminNavbar
-              // brandText={getBrandText(location.pathname)}
-              // toggleSidebar={toggleSidebar}
-              // sidebarOpened={sidebarOpened}
-              />
+              <AdminNavbar />
               <Routes>
                 {getRoutes(routes)}
                 <Route
