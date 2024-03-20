@@ -16,43 +16,34 @@ Access to an OpenAI API for chatbot functionality
 Installation
 Clone the repository to your local machine:
 
-bash
-Copy code
 git clone https://github.com/your-username/dashboard-project.git
 Navigate to the project directory:
 
-bash
-Copy code
-cd dashboard-project
+cd dashboard_analytics
 Install dependencies:
 
-bash
-Copy code
 npm install
 or
-
-bash
-Copy code
 yarn install
-Set up the OpenAI API:
+
+# Set up the OpenAI API:
 
 Obtain an API key from OpenAI.
 Configure the API key in your environment or directly in the code (keep it secure).
+
 Update the chatbot functionality as needed based on your requirements.
-Usage
+
+# Usage
+
 Start the development server:
 
-bash
-Copy code
 npm start
 or
-
-bash
-Copy code
 yarn start
+
 Access the dashboard in your browser at http://localhost:3000 or the specified port.
 
 Interact with the dashboard interface and chatbot to explore data and receive insights.
 
-Contributing
+# Contributing
 Contributions are welcome! If you have suggestions, improvements, or feature requests, please feel free to open an issue or submit a pull request.
