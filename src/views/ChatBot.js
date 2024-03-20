@@ -11,7 +11,7 @@ import {
 } from "@chatscope/chat-ui-kit-react";
 import prompt from "./prompt";
 
-const chatbot_key = "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";
+const chatbot_key = "YOUR_API_KEY_HERE";
 const systemMessage = {
   role: "system",
   content: prompt,
