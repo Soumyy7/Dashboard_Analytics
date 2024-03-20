@@ -14,19 +14,21 @@ Node.js and npm (or yarn) for package management
 Access to an OpenAI API for chatbot functionality
 
 Installation
-Clone the repository to your local machine:
+1. Clone the repository to your local machine:
 
 git clone https://github.com/your-username/dashboard-project.git
-Navigate to the project directory:
+
+2. Navigate to the project directory:
 
 cd dashboard_analytics
-Install dependencies:
+
+3. Install dependencies:
 
 npm install
 or
 yarn install
 
-# Set up the OpenAI API:
+4. Set up the OpenAI API:
 
 Obtain an API key from OpenAI.
 Configure the API key in your environment or directly in the code (keep it secure).
